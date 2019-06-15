@@ -1,0 +1,7 @@
+---
+# tasks file for bvansomeren.audit
+
+- name: include correct OS
+  include_tasks: "main-{{ ansible_os_family }}.yml"
+  tags:
+  - always

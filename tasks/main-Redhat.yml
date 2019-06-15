@@ -1,0 +1,26 @@
+---
+# tasks file for bvansomeren.audit
+
+- name: install audit packages
+  package:
+    name: "{{ audit_packages }}"
+    state: installed
+
+- name: enable euditd
+  service:
+    name: auditd
+    state: started
+    enabled: True
+
+- name: configure auditd
+  template:
+    src: auditd.conf
+    dest: /etc/audit/auditd.conf
+  notify: Restart auditd
+
+- name: deploy audit.rules for Redhat systems
+  template:
+    src: audit.rules
+    dest: /etc/audit/audit.rules
+  notify: Restart auditd
+

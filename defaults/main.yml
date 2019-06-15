@@ -1,0 +1,5 @@
+---
+# defaults file for bvansomeren.audit
+audit_packages:
+- audit
+- audit-libs
