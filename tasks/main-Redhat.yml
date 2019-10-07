@@ -6,7 +6,7 @@
     name: "{{ audit_packages }}"
     state: installed
 
-- name: enable euditd
+- name: enable auditd
   service:
     name: auditd
     state: started
@@ -21,6 +21,6 @@
 - name: deploy audit.rules for Redhat systems
   template:
     src: audit.rules
-    dest: /etc/audit/audit.rules
+    dest: /etc/audit/rules.d/audit.rules
   notify: Restart auditd
 
