@@ -1,5 +1,5 @@
 ---
-# tasks file for bvansomeren.audit
+# tasks file for coffeesprout.audit
 
 - name: install audit packages
   package:

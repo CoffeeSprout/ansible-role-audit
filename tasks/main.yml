@@ -1,5 +1,5 @@
 ---
-# tasks file for bvansomeren.audit
+# tasks file for coffeesprout.audit
 
 - name: include correct OS
   include_tasks: "main-{{ ansible_os_family }}.yml"

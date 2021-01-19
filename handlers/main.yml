@@ -1,5 +1,5 @@
 ---
-# handlers file for bvansomeren.audit
+# handlers file for coffeesprout.audit
 - name: Restart auditd
   command: service auditd restart
   args:

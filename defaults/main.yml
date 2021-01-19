@@ -1,5 +1,5 @@
 ---
-# defaults file for bvansomeren.audit
+# defaults file for coffeesprout.audit
 audit_packages:
 - audit
 - audit-libs
